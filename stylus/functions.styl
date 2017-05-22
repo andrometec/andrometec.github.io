@@ -1,0 +1,10 @@
+define-relative-variables($base, $medium-value)
+  define($base + '-medium', $medium-value, true)
+  _define_relative-variables($base, $medium-value, 1.18321595662/*√(7/5)*/, 'large' 'huge' 'gargantuan' 'enormous' 'maximal')
+  _define_relative-variables($base, $medium-value, 0.84515425472/*√(5/7)*/, 'small' 'tiny' 'minimal')
+
+_define_relative-variables($base, $value, $scale, $arr)
+  for rel in $arr
+    $value = $value * ($scale)
+    $key = $base + '-' + rel
+    define($key, $value, true)

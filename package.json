@@ -1,0 +1,47 @@
+{
+  "name": "andrometec.github.io",
+  "version": "1.0.0",
+  "description": "ANDROMETEC 開発紹介サイト",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s mkdir build:*",
+    "build:css": "stylus -m -u nib stylus/index.styl -o dist",
+    "watch": "run-p mkdir watch:*",
+    "watch:css": "stylus -w -m -u nib stylus/index.styl -o dist",
+    "watch:copy": "run-p watch:copy:*",
+    "watch:copy:html": "cpx -w \"html/*.html\" dist",
+    "watch:copy:image": "cpx -w \"image/*.{png,jpg,svg}\" dist/image",
+    "copy": "run-s copy:*",
+    "copy:html": "cpx \"html/*.html\" dist",
+    "copy:image": "cpx \"image/*.{png,jpg,svg}\" dist/image",
+    "clean": "rimraf dist",
+    "mkdir": "mkdirp dist",
+    "release": "run-s clean build copy",
+    "deploy": "npm-run-all -s release deploy:beforecopy deploy:copy deploy:aftercopy",
+    "deploy:beforecopy": "rimraf \"./!(dist|.git|node_modules|package.json)\"",
+    "deploy:copy": "cpx \"./dist/**/*\" .",
+    "deploy:aftercopy": "rimraf dist",
+    "server": "browser-sync start -s dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrometec/andrometec.github.io.git"
+  },
+  "author": "SunFlare",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/andrometec/andrometec.github.io/issues"
+  },
+  "homepage": "https://github.com/andrometec/andrometec.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "cpx": "^1.5.0",
+    "mkdirp": "^0.5.1",
+    "nib": "^1.1.2",
+    "rimraf": "^2.6.1",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.0.2"
+  }
+}

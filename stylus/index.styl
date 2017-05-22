@@ -1,0 +1,74 @@
+@import 'nib'
+@import 'functions.styl'
+@import 'vars.styl'
+@import 'mixins.styl'
+
+global-reset()
+
+*
+  box-sizing border-box
+  position relative
+
+a
+  text-decoration none
+  color inherit
+
+
+html
+  font-size $font-size-base
+body
+  size 100% auto
+  font-family $font-family-paragraph-en, $font-family-paragraph-ja, sans-serif
+  color $color-content-dark
+  background-color $color-bg-light
+  & > header
+    display flex
+    flex-flow row nowrap
+    padding $padding-header
+    background-color $color-title-bg
+    size 100% auto
+    & > h1
+      flex 0 0 auto
+      & > a
+        & > img
+          display block
+          size $padding-header*1.2
+  & > [name=sections]
+    display flex
+    flex-flow column nowrap
+    & > .section
+      padding $grid*24 0
+      display flex
+      flex-flow column nowrap
+      align-items center
+      & > h2
+        flex 0 0 auto
+        padding $grid*6 $grid*8
+        margin $grid*18 0
+        border-bottom solid $color-title-bg 8px
+        font-size $font-size-enormous
+      & > p
+        margin $grid*18 0
+      & > p + *
+        margin $grid*18 0
+        width 80vw
+        max-width 960px
+      & > .now-loading
+        & > p
+          white-space nowrap
+          left -2.5rem
+          position absolute
+  & > footer
+    color $color-content-light-darker
+    display flex
+    flex-flow row nowrap
+    justify-content center
+    background-color $color-footer-bg
+    margin-top $grid*8
+    padding $grid*20 0
+    font-size $font-size-tiny
+    line-height $line-height-tiny
+    & > a
+      & > img
+        height $grid*16
+        width @height*$ratio-footer-img
