@@ -18,7 +18,7 @@
     "mkdir": "mkdirp dist",
     "release": "run-s clean build copy",
     "deploy": "npm-run-all -s release deploy:beforecopy deploy:copy deploy:aftercopy",
-    "deploy:beforecopy": "rimraf \"./!(dist|.git|node_modules|package.json|favicon.png|apple-touch-icon.png)\"",
+    "deploy:beforecopy": "rimraf \"./!(dist|data|.git|node_modules|package.json|favicon.png|apple-touch-icon.png)\"",
     "deploy:copy": "cpx \"./dist/**/*\" .",
     "deploy:aftercopy": "rimraf dist",
     "server": "browser-sync start -s dist"

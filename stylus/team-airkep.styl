@@ -60,6 +60,21 @@ ta-main()
       background-color $color-ta-main-nav-link-background
       &:hover
         background-color $color-ta-main-nav-link-background__hover
+      &.disable
+        &:hover
+          background-color $color-ta-main-nav-link-background
+        &:before
+          content '準備中'
+          display flex
+          flex-flow row nowrap
+          justify-content center
+          align-items center
+          size 100%
+          font-size $font-size-huge
+          color black
+          absolute top 0 left 0
+          background-color rgba(255,255,255,.8)
+          z-index 1
       & > a
         display flex
         flex-flow row nowrap
