@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "run-s mkdir build:*",
-    "build:css": "stylus -m -u nib stylus/index.styl -o dist",
+    "build:css": "stylus -m -u nib stylus/*.styl -o dist",
     "watch": "run-p mkdir watch:*",
-    "watch:css": "stylus -w -m -u nib stylus/index.styl -o dist",
+    "watch:css": "stylus -w -m -u nib stylus/*.styl -o dist",
     "watch:copy": "run-p watch:copy:*",
     "watch:copy:html": "cpx -w \"html/*.html\" dist",
     "watch:copy:image": "cpx -w \"image/*.{png,jpg,svg}\" dist/image",
