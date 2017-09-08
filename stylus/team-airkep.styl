@@ -111,14 +111,13 @@ ta-footer()
       size auto
       margin $grid*1.6 0
 
-
-
 html
   font-size $font-size-base
   & > body
     display flex
     flex-flow column nowrap
-    min-height 100vh
+    size 100% 100vh
+    overflow auto
     background-color $color-ta-body-background
     font-family $font-family-paragraph-en, $font-family-paragraph-ja, sans-serif
     & > .header
@@ -127,3 +126,17 @@ html
       ta-main()
     & > .footer
       ta-footer()
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  html
+    font-size 21px
+  @media screen and (max-width: 990px)
+    html
+      font-size 19px
+  @media screen and (max-width: 800px)
+    html
+      font-size 14px
+  @media screen and (max-width: 599px)
+    html
+      font-size 16px
+

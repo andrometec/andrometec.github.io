@@ -17,11 +17,15 @@ a
 html
   font-size $font-size-base
 body
-  size 100% auto
+  size 100% 100vh
+  overflow auto
+  display flex
+  flex-flow column nowrap
   font-family $font-family-paragraph-en, $font-family-paragraph-ja, sans-serif
   color $color-content-dark
   background-color $color-bg-light
   & > header
+    flex 0 0 auto
     display flex
     flex-flow row nowrap
     padding $padding-header
@@ -34,6 +38,7 @@ body
           display block
           size $padding-header*1.2
   & > [name=sections]
+    flex 1 0 auto
     display flex
     flex-flow column nowrap
     & > .section
@@ -59,6 +64,7 @@ body
           left -2.5rem
           position absolute
   & > footer
+    flex 0 0 auto
     color $color-content-light-darker
     display flex
     flex-flow row nowrap
@@ -72,3 +78,17 @@ body
       & > img
         height $grid*16
         width @height*$ratio-footer-img
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  html
+    font-size 21px
+  @media screen and (max-width: 990px)
+    html
+      font-size 19px
+  @media screen and (max-width: 800px)
+    html
+      font-size 14px
+  @media screen and (max-width: 599px)
+    html
+      font-size 16px
+

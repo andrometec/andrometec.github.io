@@ -21,7 +21,8 @@
     "deploy:beforecopy": "rimraf \"./!(dist|data|.git|node_modules|package.json|favicon.png|apple-touch-icon.png)\"",
     "deploy:copy": "cpx \"./dist/**/*\" .",
     "deploy:aftercopy": "rimraf dist",
-    "server": "browser-sync start -s dist"
+    "server": "browser-sync start -s dist",
+    "start": "run-p watch server"
   },
   "repository": {
     "type": "git",
