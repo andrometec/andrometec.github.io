@@ -2,5 +2,53 @@
 
 有限会社アンドロメテックの開発紹介サイトです。
 
-`yarn deploy` で プロジェクトルートに必要なファイルがコピーされます。
-公開するにはこの `yarn deploy` 後、master にコミット、プッシュします。
+## 開発
+
+開発中のページはローカルサーバーでプレビューできます。
+
+### 準備
+
+```shell
+$ git clone git@github.com:andrometec/andrometec.github.io.git
+$ cd andrometec.github.io
+$ npm i #インストール
+```
+
+### コマンド
+
+```shell
+$ npm run watch #ファイルの変更を検知して stylus のコンパイル、ファイルのコピーなどを行います
+$ npm run release #クリーンビルドします
+$ npm run server #localhost:3000 で dist/ 以下を配信します
+$ npm start # watch と server を実行します
+```
+
+`npm start` を実行し、ブラウザでプレビューしながら開発を進めるイメージです。
+
+### ディレクトリ構造
+
+|ディレクトリ|説明|
+|:---|:---|
+|`image/`|画像ファイル|
+|`html/`|HTMLファイル|
+|`stylus/`|Stylusファイル|
+|`dist/`|公開用ファイル|
+
+最終的に `dist/` 配下は以下のようになるため、画像ファイルやスタイルシートを参照するパスはこれに沿って設定する必要があります。
+
+```shell
+.
+├── image
+│   ├── and-logo-s.svg
+│   └── and-logo.svg
+├── index.css
+├── index.css.map
+├── index.html
+├── team-airkep.css
+├── team-airkep.css.map
+└── team-airkep.html
+```
+
+## 更新
+
+```
