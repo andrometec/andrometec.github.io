@@ -51,6 +51,11 @@ $ npm start # watch と server を実行します
 
 ## 更新
 
+### `team-airkep.html`: リンクを準備中にする
+`html/team-airkep.html` を編集します。
+`li.main-nav-link` 要素の `class` に `disable` を追加すると `準備中` になります。
+
+
 ## 公開
 
 dev ブランチにチェックアウトし `npm run deploy` を実行すると、プロジェクトルートに必要なファイルが全てコピーされ、master ブランチにコミットされます。
