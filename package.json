@@ -15,13 +15,14 @@
     "copy:html": "cpx \"html/*.html\" dist",
     "copy:image": "cpx \"image/*.{png,jpg,svg}\" dist/image",
     "clean": "rimraf dist",
-    "mkdir": "mkdirp dist",
-    "release": "run-s clean build copy",
+    "mkdir": "run-s mkdir:*",
+    "release": "run-s clean mkdir build copy",
     "deploy": "npm-run-all -s release deploy:beforecopy deploy:copy deploy:aftercopy",
     "deploy:beforecopy": "rimraf \"./!(dist|data|.git|node_modules|package.json|favicon.png|apple-touch-icon.png)\"",
     "deploy:copy": "cpx \"./dist/**/*\" .",
     "deploy:aftercopy": "rimraf dist",
-    "server": "browser-sync start -s dist",
+    "server": "npm run mkdir && browser-sync start -s dist",
+    "mkdir:dist": "mkdirp dist",
     "start": "run-p watch server"
   },
   "repository": {
