@@ -51,4 +51,13 @@ $ npm start # watch と server を実行します
 
 ## 更新
 
+## 公開
+
+dev ブランチにチェックアウトし `npm run deploy` を実行すると、プロジェクトルートに必要なファイルが全てコピーされ、master ブランチにコミットされます。
+公開するには master を GitHub にフォースプッシュする必要があります。
+
+```shell
+$ git checkout dev
+$ npm run deploy
+$ git push -f origin master
 ```

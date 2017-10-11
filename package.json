@@ -17,10 +17,12 @@
     "clean": "rimraf dist",
     "mkdir": "run-s mkdir:*",
     "release": "run-s clean mkdir build copy",
-    "deploy": "npm-run-all -s release deploy:beforecopy deploy:copy deploy:aftercopy",
+    "deploy": "npm-run-all -s deploy:prepare release deploy:beforecopy deploy:copy deploy:aftercopy deploy:commit",
     "deploy:beforecopy": "rimraf \"./!(dist|data|.git|node_modules|package.json|favicon.png|apple-touch-icon.png)\"",
     "deploy:copy": "cpx \"./dist/**/*\" .",
     "deploy:aftercopy": "rimraf dist",
+    "deploy:prepare": "git checkout master && git reset --hard dev",
+    "deploy:commit": "git add . && git commit -m 'Publish'",
     "server": "npm run mkdir && browser-sync start -s dist",
     "mkdir:dist": "mkdirp dist",
     "start": "run-p watch server"
