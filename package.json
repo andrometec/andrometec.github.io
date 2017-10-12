@@ -6,7 +6,7 @@
   "scripts": {
     "build": "run-s mkdir build:*",
     "build:css": "stylus -m -u nib stylus/*.styl -o dist",
-    "watch": "run-p mkdir watch:*",
+    "watch": "npm-run-all -s mkdir -p watch:*",
     "watch:css": "stylus -w -m -u nib stylus/*.styl -o dist",
     "watch:copy": "run-p watch:copy:*",
     "watch:copy:html": "cpx -w \"html/*.html\" dist",
