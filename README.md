@@ -4,6 +4,10 @@
 
 ## 開発
 
+`<Organization or User>.github.io` リポジトリでは GitHub の機能により master ブランチの内容がウェブページとして自動的に公開されます。  
+ANDROMETEC 開発紹介サイトではこの機能を利用してウェブページを公開しています。  
+
+そのため、開発は必ず dev ブランチで行うようにしてください。
 開発中のページはローカルサーバーでプレビューできます。
 
 ### 準備
@@ -11,6 +15,7 @@
 ```shell
 $ git clone git@github.com:andrometec/andrometec.github.io.git
 $ cd andrometec.github.io
+$ git checkout -b dev origin/dev # dev ブランチにチェックアウト
 $ npm i #インストール
 ```
 
@@ -66,6 +71,9 @@ $ npm start # watch と server を実行します
 
 
 ## 公開
+
+:warning:**`npm watch`, `npm start` を実行している場合は、公開を行う前に必ずプロセスを終了してください**
+
 
 dev ブランチにチェックアウトし `npm run deploy` を実行すると、プロジェクトルートに必要なファイルが全てコピーされ、master ブランチにコミットされます。
 公開するには master を GitHub にフォースプッシュする必要があります。
