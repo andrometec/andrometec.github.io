@@ -1,0 +1,324 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  font-size: calc(72% + 0.5vw);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  font-family: Helvetica Neue, "Helvetica Neue", Helvetica, "Helvetica", HiraginoSans, "Hiragino Sans", sans-serif;
+  color: #232323;
+  background-color: #f4f4f4;
+}
+body > header {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  padding: 1.25rem;
+  background-color: #48a0f7;
+  width: 100%;
+  height: auto;
+}
+body > header > h1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+body > header > h1 > a > img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body > [name=sections] {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+body > [name=sections] > .section {
+  padding: 6rem 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+body > [name=sections] > .section > h2 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 1.5rem 2rem;
+  margin: 4.5rem 0;
+  border-bottom: solid #48a0f7 8px;
+  font-size: 1.960000000000509rem;
+}
+body > [name=sections] > .section > p {
+  margin: 4.5rem 0;
+}
+body > [name=sections] > .section > p + * {
+  margin: 4.5rem 0;
+  width: 80vw;
+  max-width: 960px;
+}
+body > [name=sections] > .section > .now-loading > p {
+  white-space: nowrap;
+  left: -2.5rem;
+  position: absolute;
+}
+body > footer {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  color: #ccc;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #2b343d;
+  margin-top: 2rem;
+  padding: 5rem 0;
+  font-size: 0.714285714271319rem;
+  line-height: 1.214285714261242rem;
+}
+body > footer > a > img {
+  height: 4rem;
+  width: 21.818181818181817rem;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  html {
+    font-size: 21px;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 990px), screen and (-ms-high-contrast: none) and (max-width: 990px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 800px), screen and (-ms-high-contrast: none) and (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 599px), screen and (-ms-high-contrast: none) and (max-width: 599px) {
+  html {
+    font-size: 16px;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  html {
+    font-size: 21px;
+  }
+@media screen and (max-width: 990px) {
+    html {
+      font-size: 19px;
+    }
+}
+@media screen and (max-width: 800px) {
+    html {
+      font-size: 14px;
+    }
+}
+@media screen and (max-width: 599px) {
+    html {
+      font-size: 16px;
+    }
+}
+}
+/*# sourceMappingURL=index.css.map */
