@@ -51,8 +51,17 @@ $ npm start # watch と server を実行します
 
 ## 更新
 
+### `team-airkep.html`: リンクを追加する
+`html/team-airkep.html` を編集します。  
+`article[name=main] > ul[name=main-nav]` 配下に `li.main-nav-link` 要素を追加するとリンクが追加されます。  
+`li.main-nav-link` 配下には `a` 要素を配置し、`href` 属性に URL を設定します。
+
+```html
+<li class="main-nav-link"><a href="https://example.com">ラベル</a></li>
+```
+
 ### `team-airkep.html`: リンクを準備中にする
-`html/team-airkep.html` を編集します。
+`html/team-airkep.html` を編集します。  
 `li.main-nav-link` 要素の `class` に `disable` を追加すると `準備中` になります。
 
 
